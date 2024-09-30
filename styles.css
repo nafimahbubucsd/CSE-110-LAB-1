@@ -1,17 +1,25 @@
 /* General Styling */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sticky Header Styling */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white; /* Set background to cover sticky area */
+    padding: 10px 20px;
 }
 
 /* Navbar Styling */
 .navbar {
     background-color: white;
     overflow: hidden;
-    position: sticky;
-    top: 0;
     width: 100%;
     padding: 10px 0;
-    z-index: 1000;
 }
 
 .navbar ul {
@@ -20,7 +28,6 @@ body {
     margin: 0;
     display: flex;
     justify-content: flex-start; /* Align items to the left */
-    padding-left: 20px; /* Add some padding for spacing */
 }
 
 .navbar ul li {
@@ -30,19 +37,22 @@ body {
 .navbar ul li a {
     color: #1e3a5f;
     text-decoration: none;
-    font-size: 24px; /* Reduce font size */
+    font-size: 24px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover transition */
 }
 
 .navbar ul li a:hover {
     background-color: #1e3a5f;
+    color: white; /* Change font color to white on hover */
     padding: 5px;
     border-radius: 5px;
 }
 
 .navbar-logo {
-    max-width: 400px;
+    max-width: 400px; /* Keep the original larger size */
+    height: auto; /* Maintain aspect ratio */
     display: block;
-    margin-left: 20px; /* Align the logo to the left */
+    margin-bottom: 10px; /* Add spacing between logo and navbar */
 }
 
 /* Section Styling */
@@ -50,6 +60,12 @@ body {
     padding: 50px;
     text-align: left; /* Align headings and content to the left */
     margin: 20px;
+}
+
+/* Section Images: Max Width */
+.section img {
+    max-width: 100%; /* Ensure images resize correctly */
+    height: auto;
 }
 
 /* Section 1: Background Color */
@@ -77,7 +93,7 @@ body {
 
 /* Scroll Margin for Anchor Links */
 .section {
-    scroll-margin-top: 60px; /* Adjust based on navbar height */
+    scroll-margin-top: 120px; /* Adjust based on sticky header height */
 }
 
 /* Section Paragraph Font Size */
@@ -104,8 +120,32 @@ body {
     border-radius: 5px;
 }
 
-/* Hover Effect for Navbar */
-.navbar ul li a:hover {
-    background-color: #182b49;
-    color: white;
+/* Responsive Styles */
+@media (max-width: 800px) {
+    /* Hide the navigation links */
+    .navbar ul {
+        display: none;
+    }
+    
+    /* Scale the top logo */
+    .navbar-logo {
+        max-width: 75%;
+        margin: 20px auto; /* Center align */
+        display: block;
+    }
+    
+    /* Resize headers */
+    h2 {
+        font-size: 24px;
+    }
+    
+    /* Resize paragraph text */
+    p {
+        font-size: 20px;
+    }
+    
+    /* Change 4-column grid to 2-column grid */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
