@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: white;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    padding-left: 20px; /* Add some padding for spacing */
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #1e3a5f;
+    text-decoration: none;
+    font-size: 24px; /* Reduce font size */
+}
+
+.navbar ul li a:hover {
+    background-color: #1e3a5f;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navbar-logo {
+    max-width: 400px;
+    display: block;
+    margin-left: 20px; /* Align the logo to the left */
+}
+
+/* Section Styling */
+.section {
+    padding: 50px;
+    text-align: left; /* Align headings and content to the left */
+    margin: 20px;
+}
+
+/* Section 1: Background Color */
+#athletics {
+    background-color: rgb(245, 240, 230);
+}
+
+/* Section 2: Background Image and Text Color */
+#college {
+    background-image: url(https://www.ucsd.edu/_resources/img/bg-orbs-1.jpg); 
+    background-size: cover;
+    color: white;
+}
+
+/* Section 3: Background Color */
+#section-3 {
+    background-color: rgb(245, 240, 230);
+}
+
+/* Make Sections Inline-Block */
+.section {
+    display: inline-block;
+    width: 90%;
+}
+
+/* Scroll Margin for Anchor Links */
+.section {
+    scroll-margin-top: 60px; /* Adjust based on navbar height */
+}
+
+/* Section Paragraph Font Size */
+.section p {
+    font-size: 24px; /* Reduce paragraph font size */
+}
+
+/* Grid Styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.grid-item {
+    background-color: #182b49;
+    color: white;
+    padding: 20px;
+    max-height: 500px;
+    overflow: scroll;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Hover Effect for Navbar */
+.navbar ul li a:hover {
+    background-color: #182b49;
+    color: white;
+}
