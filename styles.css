@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* Sticky Header Styling */
@@ -17,9 +18,7 @@ body {
 /* Navbar Styling */
 .navbar {
     background-color: white;
-    overflow: hidden;
     width: 100%;
-    padding: 10px 0;
 }
 
 .navbar ul {
@@ -28,6 +27,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: flex-start; /* Align items to the left */
+    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
 }
 
 .navbar ul li {
@@ -49,7 +49,7 @@ body {
 }
 
 .navbar-logo {
-    max-width: 400px; /* Keep the original larger size */
+    max-width: 100%; /* Ensures logo scales properly */
     height: auto; /* Maintain aspect ratio */
     display: block;
     margin-bottom: 10px; /* Add spacing between logo and navbar */
@@ -57,9 +57,11 @@ body {
 
 /* Section Styling */
 .section {
-    padding: 50px;
+    padding: 20px;
     text-align: left; /* Align headings and content to the left */
-    margin: 20px;
+    margin: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Section Images: Max Width */
@@ -88,7 +90,7 @@ body {
 /* Make Sections Inline-Block */
 .section {
     display: inline-block;
-    width: 90%;
+    width: 100%;
 }
 
 /* Scroll Margin for Anchor Links */
@@ -105,47 +107,50 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 90%;
-    margin: auto;
+    gap: 15px;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .grid-item {
     background-color: #182b49;
     color: white;
-    padding: 20px;
+    padding: 10px;
     max-height: 500px;
     overflow: scroll;
     text-align: center;
     border-radius: 5px;
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Screens Less Than 800px */
 @media (max-width: 800px) {
-    /* Hide the navigation links */
+    /* Show the navigation links */
     .navbar ul {
-        display: none;
+        display: block; /* Display navbar links vertically */
+        text-align: center; /* Center-align the nav items */
     }
-    
+
     /* Scale the top logo */
     .navbar-logo {
-        max-width: 75%;
-        margin: 20px auto; /* Center align */
+        max-width: 75%; /* Scale logo to be smaller on mobile */
+        margin: 20px auto; /* Center the logo */
         display: block;
     }
     
     /* Resize headers */
     h2 {
-        font-size: 24px;
+        font-size: 24px; /* Smaller header size */
+        text-align: center;
     }
     
     /* Resize paragraph text */
     p {
-        font-size: 20px;
+        font-size: 20px; /* Smaller paragraph size */
     }
     
-    /* Change 4-column grid to 2-column grid */
+    /* Change 4-column grid to 1-column grid */
     .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; /* Adjust grid to 1 column on very small screens */
     }
 }
