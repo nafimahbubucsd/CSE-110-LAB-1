@@ -87,6 +87,42 @@ body {
     background-color: rgb(245, 240, 230);
 }
 
+/* Subscribe Section Form Styling */
+#subscribe {
+    background-color: rgb(245, 240, 230); /* Same style as college logos section */
+}
+
+form {
+    margin-top: 15px;
+}
+
+form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="email"] {
+    padding: 8px;
+    margin-right: 10px;
+    width: calc(100% - 120px); /* Make input box responsive */
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    padding: 8px 15px;
+    background-color: #182b49;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1e3a5f;
+}
+
 /* Make Sections Inline-Block */
 .section {
     display: inline-block;
